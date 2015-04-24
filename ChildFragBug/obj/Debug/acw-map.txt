@@ -1,0 +1,3 @@
+ChildFragBug.MainActivity;childfragbug.MainActivity
+ChildFragBug.ParentFragmentView;childfragbug.ParentFragmentView
+ChildFragBug.ChildFragmentView;childfragbug.ChildFragmentView

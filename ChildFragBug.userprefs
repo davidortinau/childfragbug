@@ -1,9 +1,16 @@
 ﻿<Properties StartupItem="ChildFragBug/ChildFragBug.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.R32D301GRXH" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChildFragBug/Views/MainView.cs">
     <Files>
-      <File FileName="ChildFragBug/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="ChildFragBug/ParentFragmentView.cs" Line="45" Column="5" />
+      <File FileName="ChildFragBug/Views/MainView.cs" Line="21" Column="4" />
+      <File FileName="ChildFragBug/Views/ParentFragmentView.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug/Views/ChildFragmentView.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug/Setup.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug.Core/ToDo-MvvmCross/_ Core.txt" Line="1" Column="1" />
+      <File FileName="ChildFragBug.Core/App.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug.Core/ViewModels/MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug.Core/ViewModels/ParentFragmentViewModel.cs" Line="1" Column="1" />
+      <File FileName="ChildFragBug.Core/ViewModels/ChildFragmentViewModel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -26,10 +26,30 @@ namespace ChildFragBug
 		
 		public static void UpdateIdValues()
 		{
+			global::Cirrious.MvvmCross.Droid.FullFragging.Resource.String.ApplicationName = global::ChildFragBug.Resource.String.ApplicationName;
+			global::Cirrious.MvvmCross.Droid.FullFragging.Resource.String.Hello = global::ChildFragBug.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
 		{
+			
+			// aapt resource value: 0x7f010000
+			public const int MvxBind = 2130771968;
+			
+			// aapt resource value: 0x7f010004
+			public const int MvxDropDownItemTemplate = 2130771972;
+			
+			// aapt resource value: 0x7f010003
+			public const int MvxItemTemplate = 2130771971;
+			
+			// aapt resource value: 0x7f010001
+			public const int MvxLang = 2130771969;
+			
+			// aapt resource value: 0x7f010005
+			public const int MvxSource = 2130771973;
+			
+			// aapt resource value: 0x7f010002
+			public const int MvxTemplate = 2130771970;
 			
 			static Attribute()
 			{
@@ -47,6 +67,9 @@ namespace ChildFragBug
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int splash = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -60,17 +83,17 @@ namespace ChildFragBug
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int ChildFragmentView = 2131034115;
+			// aapt resource value: 0x7f040003
+			public const int ChildFragmentView = 2130968579;
 			
-			// aapt resource value: 0x7f050002
-			public const int HeadlineText = 2131034114;
+			// aapt resource value: 0x7f040002
+			public const int HeadlineText = 2130968578;
 			
-			// aapt resource value: 0x7f050000
-			public const int ParentFragmentView = 2131034112;
+			// aapt resource value: 0x7f040000
+			public const int MvxBindingTagUnique = 2130968576;
 			
-			// aapt resource value: 0x7f050001
-			public const int myButton = 2131034113;
+			// aapt resource value: 0x7f040001
+			public const int ParentFragmentView = 2130968577;
 			
 			static Id()
 			{
@@ -89,10 +112,16 @@ namespace ChildFragBug
 			public const int ChildFragment = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int FirstView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ParentFragment = 2130903042;
+			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int ParentFragment = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int SplashScreen = 2130903044;
 			
 			static Layout()
 			{
@@ -107,11 +136,17 @@ namespace ChildFragBug
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f060003
+			public const int ApplicationName = 2131099651;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f060002
+			public const int Hello = 2131099650;
+			
+			// aapt resource value: 0x7f060001
+			public const int app_name = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int hello = 2131099648;
 			
 			static String()
 			{
@@ -119,6 +154,71 @@ namespace ChildFragBug
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Splash = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] MvxBinding = new int[]
+			{
+					2130771968,
+					2130771969};
+			
+			// aapt resource value: 0
+			public const int MvxBinding_MvxBind = 0;
+			
+			// aapt resource value: 1
+			public const int MvxBinding_MvxLang = 1;
+			
+			public static int[] MvxControl = new int[]
+			{
+					2130771970};
+			
+			// aapt resource value: 0
+			public const int MvxControl_MvxTemplate = 0;
+			
+			public static int[] MvxImageView = new int[]
+			{
+					2130771973};
+			
+			// aapt resource value: 0
+			public const int MvxImageView_MvxSource = 0;
+			
+			public static int[] MvxListView = new int[]
+			{
+					2130771971,
+					2130771972};
+			
+			// aapt resource value: 1
+			public const int MvxListView_MvxDropDownItemTemplate = 1;
+			
+			// aapt resource value: 0
+			public const int MvxListView_MvxItemTemplate = 0;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}

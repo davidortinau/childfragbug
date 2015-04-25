@@ -17,7 +17,7 @@ public class MonoPackageManager {
 	static Object lock = new Object ();
 	static boolean initialized;
 
-	public static void LoadApplication (Context context, String runtimeDataDir, String[] apks)
+	public static void LoadApplication (Context context, ApplicationInfo runtimePackage, String[] apks)
 	{
 		synchronized (lock) {
 			if (!initialized) {
@@ -26,13 +26,13 @@ public class MonoPackageManager {
 				String language     = locale.getLanguage () + "-" + locale.getCountry ();
 				String filesDir     = context.getFilesDir ().getAbsolutePath ();
 				String cacheDir     = context.getCacheDir ().getAbsolutePath ();
-				String dataDir      = context.getApplicationInfo ().dataDir + "/lib";
+				String dataDir      = getNativeLibraryPath (context);
 				ClassLoader loader  = context.getClassLoader ();
 
 				Runtime.init (
 						language,
 						apks,
-						runtimeDataDir,
+						getNativeLibraryPath (runtimePackage),
 						new String[]{
 							filesDir,
 							cacheDir,
@@ -47,6 +47,18 @@ public class MonoPackageManager {
 				initialized = true;
 			}
 		}
+	}
+
+	static String getNativeLibraryPath (Context context)
+	{
+	    return getNativeLibraryPath (context.getApplicationInfo ());
+	}
+
+	static String getNativeLibraryPath (ApplicationInfo ainfo)
+	{
+		if (android.os.Build.VERSION.SDK_INT >= 9)
+			return ainfo.nativeLibraryDir;
+		return ainfo.dataDir + "/lib";
 	}
 
 	public static String[] getAssemblies ()
@@ -68,6 +80,70 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"ChildFragBug.dll",
+		"Cirrious.CrossCore.Droid.dll",
+		"Cirrious.MvvmCross.Binding.Droid.dll",
+		"Cirrious.CrossCore.dll",
+		"Cirrious.MvvmCross.Binding.dll",
+		"Cirrious.MvvmCross.Localization.dll",
+		"Cirrious.MvvmCross.Droid.dll",
+		"Cirrious.MvvmCross.dll",
+		"Cirrious.MvvmCross.Droid.FullFragging.dll",
+		"Cirrious.MvvmCross.Plugins.File.dll",
+		"Cirrious.MvvmCross.Plugins.File.Droid.dll",
+		"Newtonsoft.Json.dll",
+		"Cirrious.MvvmCross.Plugins.Json.dll",
+		"Cirrious.MvvmCross.Plugins.Messenger.dll",
+		"Cirrious.MvvmCross.Plugins.Visibility.dll",
+		"Cirrious.MvvmCross.Plugins.Visibility.Droid.dll",
+		"Cirrious.MvvmCross.Plugins.DownloadCache.dll",
+		"Cirrious.MvvmCross.Plugins.DownloadCache.Droid.dll",
+		"ChildFragBug.Core.dll",
+		"System.Collections.Concurrent.dll",
+		"System.Collections.dll",
+		"System.ComponentModel.Annotations.dll",
+		"System.ComponentModel.EventBasedAsync.dll",
+		"System.ComponentModel.dll",
+		"System.Diagnostics.Contracts.dll",
+		"System.Diagnostics.Debug.dll",
+		"System.Diagnostics.Tools.dll",
+		"System.Dynamic.Runtime.dll",
+		"System.Globalization.dll",
+		"System.IO.dll",
+		"System.Linq.Expressions.dll",
+		"System.Linq.Parallel.dll",
+		"System.Linq.Queryable.dll",
+		"System.Linq.dll",
+		"System.Net.NetworkInformation.dll",
+		"System.Net.Primitives.dll",
+		"System.Net.Requests.dll",
+		"System.ObjectModel.dll",
+		"System.Reflection.Emit.ILGeneration.dll",
+		"System.Reflection.Emit.Lightweight.dll",
+		"System.Reflection.Emit.dll",
+		"System.Reflection.Extensions.dll",
+		"System.Reflection.Primitives.dll",
+		"System.Reflection.dll",
+		"System.Resources.ResourceManager.dll",
+		"System.Runtime.Extensions.dll",
+		"System.Runtime.InteropServices.WindowsRuntime.dll",
+		"System.Runtime.InteropServices.dll",
+		"System.Runtime.Numerics.dll",
+		"System.Runtime.Serialization.Json.dll",
+		"System.Runtime.Serialization.Primitives.dll",
+		"System.Runtime.Serialization.Xml.dll",
+		"System.Runtime.dll",
+		"System.Security.Principal.dll",
+		"System.ServiceModel.Http.dll",
+		"System.ServiceModel.Primitives.dll",
+		"System.Text.Encoding.Extensions.dll",
+		"System.Text.Encoding.dll",
+		"System.Text.RegularExpressions.dll",
+		"System.Threading.Tasks.Parallel.dll",
+		"System.Threading.Tasks.dll",
+		"System.Threading.dll",
+		"System.Xml.ReaderWriter.dll",
+		"System.Xml.XDocument.dll",
+		"System.Xml.XmlSerializer.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

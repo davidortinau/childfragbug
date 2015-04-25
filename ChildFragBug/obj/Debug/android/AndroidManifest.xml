@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.rendr_llc.childfragbug">
   <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
   <application android:label="ChildFragBug" android:largeHeap="true" android:hardwareAccelerated="true" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="ChildFragBug" android:name="childfragbug.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="ChildFragBug" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="md57c11916ad5501a009c9457a707203fb1.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:icon="@drawable/icon" android:label="ChildFragBug" android:name="md5996305d55339f079096554eb752757b6.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
@@ -19,4 +25,5 @@
   <supports-screens android:smallScreens="false" android:normalScreens="false" android:largeScreens="true" android:xlargeScreens="true" android:requiresSmallestWidthDp="600" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
